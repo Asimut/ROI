@@ -303,6 +303,25 @@
                 allowFail: false
             }]
         });
+        
+        tincan.sendStatement(
+        {
+                actor: {
+                       mbox: "mailto:"+"<%=curUser.email%>"
+                },
+                verb: {
+                      id: "https://asimut.github.io/ROI/story_html/verbs/completed",
+                  display: {"ru-RU": "просмотрел"}
+                    
+                },
+                target: {
+                   id: "https://asimut.github.io/ROI/story_html/activities/course",
+                   definition: {
+                               name: {"ru-RU": "курс"}
+                  }
+               }
+            }
+        );
 
 
     }
